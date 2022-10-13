@@ -6,6 +6,7 @@ function createTiles(dinosData, human) {
 
   //loop to build tiles
   for (let i = 0; i < 9; i++) {
+    //if current object is human do this
     if (i === 4) {
       const div = document.createElement("div");
       div.classList.add("grid-item");
@@ -18,7 +19,7 @@ function createTiles(dinosData, human) {
       div.append(image);
       const p = document.createElement("p");
       div.append(p);
-      // p.innerHTML = `${dinosData[i].fact}`;
+      //if current object is bird
     } else if (i === 8) {
       const div = document.createElement("div");
       div.classList.add("grid-item");
@@ -38,7 +39,7 @@ function createTiles(dinosData, human) {
       const compWeight = dinosData[i].compareWeight(human);
       const compDiet = dinosData[i].compareDiet(human);
 
-      //get ramdon fact index 0 to 5
+      // get values for facts array
       const facts = [
         dinosData[i].where,
         dinosData[i].when,
@@ -47,8 +48,10 @@ function createTiles(dinosData, human) {
         compWeight,
         compDiet,
       ];
-      const ramdom = Math.floor(Math.random() * 6);
+      //get ramdon fact index 0 to 5
+      const ramdom = Math.floor(Math.random() * facts.length);
 
+      //create tiles for Dinos
       const div = document.createElement("div");
       div.classList.add("grid-item");
       main.append(div);
