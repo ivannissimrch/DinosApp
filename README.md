@@ -11,8 +11,8 @@ This App builds an infographic that is derived from data recived from a form. It
 ### Results
 
 ## How to install
-inside the main directory run, npm i to install depencencies,
-then npm run start to start express server on port 3000,
+inside the main directory run, **npm i** to install depencencies,
+then **npm run start** to start express server on port 3000,
 inside the browser go to this link
 http://localhost:3000
 
