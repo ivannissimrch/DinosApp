@@ -14,7 +14,7 @@ formElement.addEventListener("submit", function (e) {
   //get human object
   const human = gethumanData();
 
-  //remove form from dom
+  //create tiles and remove form from dom
   createTiles(dinosArray, human);
   formElement.remove();
 });

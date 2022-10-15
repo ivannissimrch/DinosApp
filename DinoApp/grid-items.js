@@ -2,10 +2,10 @@ function createTiles(dinosData, human) {
   //select main  element to append tiles
   const main = document.getElementById("grid");
   //insert human on array index 4 to be the center tile
-  dinosData.splice(4, 0, human);
+  dinosData.splice(4, 0, human); 
 
-  //loop to build tiles
-  for (let i = 0; i < 9; i++) {
+  //loop through dinosData array length to build tiles
+  for (let i = 0; i < dinosData.length; i++) {
     //if current object is human do this
     if (i === 4) {
       const div = document.createElement("div");
