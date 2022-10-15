@@ -15,7 +15,7 @@ function getDinos(fileLink) {
     if (this.height > humanObject.height) {
       return `${this.species} is  ${heightDiference} inches taller than you`;
     } else {
-      return `${this.species} is  ${heightDiference} inches shorter than you`;
+      return `${this.species} is  ${Math.abs(heightDiference)} inches shorter than you`;
     }
   };
 
@@ -24,7 +24,7 @@ function getDinos(fileLink) {
     if (this.weight > humanObject.weight) {
       return `${this.species} is ${weightDiference} lb heavier than you`;
     } else {
-      return `${this.species} is ${weightDiference} lb ligther than you`;
+      return `${this.species} is ${Math.abs(weightDiference)} lb ligther than you`;
     }
   };
 
