@@ -1,13 +1,14 @@
 /* Require Express to run server and routes */
 const express = require("express");
-// const port = process.env.PORT;
+const path = require('path');
+const PORT = process.env.PORT || 3000;
 
 /* Start up an instance of app */
 const app = express();
 
-app.use(express.static("DinoApp"));
+app.use(express.static(path.join(__dirname, "DinoApp")));
 
 /* Setup Server */
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Server is runing in port number 3000`);
+app.listen(PORT, () => {
+  console.log(`Server is runing in port number ${PORT}`);
 });
